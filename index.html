@@ -8,6 +8,15 @@
     href="style.css"
 </head>
 <body>
+    <nav class="navbar">
+    <h2 class="logo">WheelEasyy 🚗</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
     <h1>🔧 Nearby Mechanic Finder</h1>
     <p>This is my first project</p>
@@ -15,6 +24,38 @@
     <p>Find trusted mechanics near you!</p>
 
     <button>Find Nearby Mechanics</button>
+    <section class="services">
+    <h2>Our Services</h2>
+    <p>Find the right vehicle service near you.</p>
 
+    <div class="service-container">
+
+        <div class="service-card">
+            <h3>🔧 Mechanic Repair</h3>
+            <p>Get help with vehicle breakdowns and repairs.</p>
+            <button onclick="findMechanics('mechanic')">
+                Find a Mechanic
+            </button>
+        </div>
+
+        <div class="service-card">
+            <h3>🚗 Car Wash</h3>
+            <p>Find nearby car washing services.</p>
+            <button onclick="findMechanics('car wash')">
+                Find Car Wash
+            </button>
+        </div>
+
+        <div class="service-card">
+            <h3>🛠️ Vehicle Servicing</h3>
+            <p>Find maintenance and servicing centers.</p>
+            <button onclick="findMechanics('vehicle servicing')">
+                Find Service Center
+            </button>
+        </div>
+
+    </div>
+</section>
+<button onclick="contactShop()">Contact Shop</button>
 </body>
 </html>
