@@ -3,265 +3,533 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101d36">
+    <title>WheelEasyy | Your Vehicle, Our Priority</title>
+    <meta name="description" content="Find nearby mechanics, petrol bunks, car washes and vehicle servicing with WheelEasyy.">
 
-    <title>WheelEasyy - Nearby Vehicle Services</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <h2 class="logo">WheelEasyy </h2>
+<!-- NAVIGATION -->
+<header class="navbar">
+    <a href="#home" class="logo">
+        <span class="logo-icon">🚘</span>
+        <span>Wheel<span class="yellow">Easyy</span>
+            <small>DRIVE SAFE • STAY EASY</small>
+        </span>
+    </a>
 
-      <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#emergency">Emergency</a></li>
-    <li><a href="#shops">Repair Shops</a></li>
-    <li><a href="#booking">Book Service</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#account">Login / Register</a></li>
-</ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#nearby">Nearby Shops</a>
+        <a href="#booking">Booking</a>
+        <a href="#offers">Offers</a>
+        <a href="#help">Help</a>
+        <button class="nav-login" id="openLogin">Login / Register</button>
     </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Your Journey, Our Responsibility!</h1>
+<main>
 
-            <p>
-                Find trusted mechanics, car washes, and vehicle
-                servicing near you — all in one place.
-            </p>
-
-            <button onclick="findMechanics('mechanic')">
-                Find Help Near Me 📍
-            </button>
-        </div>
-    </section>
-    <!-- Emergency Roadside Assistance -->
-<section class="emergency-section" id="emergency">
-    <h2>🚨 Car Broke Down on the Highway?</h2>
-    <p>
-        Stay calm. Share your location and find nearby mechanics
-        who may be able to help.
-    </p>
-
-    <button type="button" onclick="findRoadsideHelp()">
-        🆘 Find Emergency Mechanic
-    </button>
-
-    <p id="emergencyMessage" role="status" aria-live="polite"></p>
-
-    <p class="safety-note">
-        Safety first: switch on hazard lights if possible,
-        move away from traffic, and contact local emergency
-        or highway assistance services if needed.
-    </p>
-</section>
-
-    <!-- Introduction -->
-    <section class="intro">
-        <h2>🔧 Nearby Mechanic Finder</h2>
-        <p>Find trusted vehicle services near you!</p>
-    </section>
-
-    <!-- Services Section -->
-   <!-- Services Section -->
-<section class="services" id="services">
-    <h2>Our Services</h2>
-    <p>Find the right vehicle service near you.</p>
-
-    <div class="service-container">
-
-        <div class="service-card">
-            <h3>🔧 Mechanic Repair</h3>
-            <p>Get help with vehicle breakdowns and repairs.</p>
-            <button onclick="findMechanics('mechanic')">
-                Find a Mechanic
-            </button>
-        </div>
-
-        <div class="service-card">
-            <h3>🚗 Car Wash</h3>
-            <p>Find nearby car washing services.</p>
-            <button onclick="findMechanics('car wash')">
-                Find Car Wash
-            </button>
-        </div>
-
-        <div class="service-card">
-            <h3>🛠️ Vehicle Servicing</h3>
-            <p>Find maintenance and servicing centers.</p>
-            <button onclick="findMechanics('vehicle servicing')">
-                Find Service Center
-            </button>
-        </div>
-
-    </div>
-</section>
-<!-- Search and Filter Section -->
-<section class="search-section" id="search">
-    <h2>Find Your Vehicle Service</h2>
-    <p>What service do you need today?</p>
-
-    <input
-        type="text"
-        id="serviceSearch"
-        placeholder="Search mechanic, car wash..."
-    >
-
-    <div class="filter-buttons">
-        <button onclick="filterServices('all')">All</button>
-        <button onclick="filterServices('mechanic')">Mechanics</button>
-        <button onclick="filterServices('car wash')">Car Wash</button>
-        <button onclick="filterServices('servicing')">Servicing</button>
-    </div>
-
-    <div id="searchMessage"></div>
-</section>
-<!-- Mechanic Contact Section -->
-<section class="shop-section" id="shops">
-    <h2>Mechanic Contact Center</h2>
-    <p>Contact a shop directly for repairs and servicing.</p>
-
-    <div class="shop-container">
-
-        <div class="shop-card">
-            <h3>🔧 Nearby Mechanic</h3>
-            <p>Vehicle repair and breakdown assistance.</p>
-            <p><strong>Phone:</strong> Add shop number</p>
-            <a class="call-button" href="tel:+910000000000">
-                📞 Call Now
-            </a>
-        </div>
-
-        <div class="shop-card">
-            <h3>🚿 Car Wash Center</h3>
-            <p>Car washing and cleaning services.</p>
-            <p><strong>Phone:</strong> Add shop number</p>
-            <a class="call-button" href="tel:+910000000000">
-                📞 Call Now
-            </a>
-        </div>
-
-        <div class="shop-card">
-            <h3>🛠️ Vehicle Service Center</h3>
-            <p>Vehicle maintenance and servicing.</p>
-            <p><strong>Phone:</strong> Add shop number</p>
-            <a class="call-button" href="tel:+910000000000">
-                📞 Call Now
-            </a>
-        </div>
-
-    </div>
-</section>
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Need Help With Your Vehicle?</h2>
-
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="eyebrow">YOUR TRAVEL COMPANION</span>
+        <h1>Your Vehicle,<br><span class="yellow">Our Priority.</span></h1>
         <p>
-            Find nearby mechanics, car washes, and
-            vehicle servicing centers with WheelEasyy.
+            Find nearby petrol bunks, mechanics, servicing centres
+            and car washes — all in one place.
         </p>
 
-        <button onclick="findMechanics('mechanic')">
-            Find Help Now
-        </button>
-    </section>
-    <!-- Login and Registration -->
-<section class="account-section" id="account">
-    <h2>👤 Welcome to WheelEasyy</h2>
-    <p>Sign in or create a demo account to continue.</p>
+        <div class="location-box">
+            <label for="locationInput">📍 Choose your location</label>
+            <div class="location-controls">
+                <input id="locationInput" type="text"
+                    placeholder="Enter city or area">
+                <button id="useLocation">◎ Use My Location</button>
+            </div>
+            <button class="btn btn-primary" id="findNearby">
+                Find Nearby Services →
+            </button>
+            <p id="locationMessage" class="status-message" aria-live="polite"></p>
+        </div>
 
-    <div class="account-tabs">
-        <button type="button" onclick="showAccountForm('login')">
-            Login
+        <div class="hero-features">
+            <span>✓ Quick Search</span>
+            <span>✓ Compare Services</span>
+            <span>✓ Easy Booking</span>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <span class="hero-card-icon">🛣️</span>
+        <h3>Vehicle stopped on the highway?</h3>
+        <p>Find roadside assistance and contact a nearby service provider.</p>
+        <a href="#emergency" class="btn btn-danger">🚨 Emergency Help</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <div class="section-heading">
+        <span class="eyebrow">WHAT DO YOU NEED?</span>
+        <h2>Choose Your <span class="accent">Service</span></h2>
+        <p>Select a service to search for nearby providers.</p>
+    </div>
+
+    <div class="service-grid">
+        <button class="service-card" data-service="petrol">
+            <span class="service-icon">⛽</span>
+            <h3>Petrol Bunk</h3>
+            <p>Fuel stations and directions</p>
+            <span class="card-link">Find stations →</span>
         </button>
-        <button type="button" onclick="showAccountForm('register')">
-            Register
+
+        <button class="service-card" data-service="mechanic">
+            <span class="service-icon">🔧</span>
+            <h3>Mechanic Repair</h3>
+            <p>Breakdowns and quick repairs</p>
+            <span class="card-link">Find mechanics →</span>
+        </button>
+
+        <button class="service-card" data-service="servicing">
+            <span class="service-icon">⚙️</span>
+            <h3>Vehicle Servicing</h3>
+            <p>Maintenance and inspections</p>
+            <span class="card-link">Find service centres →</span>
+        </button>
+
+        <button class="service-card" data-service="carwash">
+            <span class="service-icon">🚿</span>
+            <h3>Car Wash</h3>
+            <p>Washing and detailing</p>
+            <span class="card-link">Find car washes →</span>
+        </button>
+
+        <button class="service-card" data-service="tyre">
+            <span class="service-icon">🛞</span>
+            <h3>Tyre & Battery</h3>
+            <p>Flat tyres and battery help</p>
+            <span class="card-link">Find assistance →</span>
+        </button>
+
+        <button class="service-card" data-service="towing">
+            <span class="service-icon">🚚</span>
+            <h3>Towing Service</h3>
+            <p>Vehicle recovery and towing</p>
+            <span class="card-link">Find towing →</span>
+        </button>
+    </div>
+</section>
+
+<!-- NEARBY SHOPS -->
+<section class="section nearby-section" id="nearby">
+    <div class="section-heading">
+        <span class="eyebrow">LOCAL VEHICLE CARE</span>
+        <h2>Find <span class="accent">Nearby Shops</span></h2>
+        <p>Search providers around your chosen location.</p>
+    </div>
+
+    <div class="shop-tools">
+        <input id="shopSearch" type="search"
+            placeholder="Search shop name or service...">
+
+        <select id="shopType" aria-label="Filter by service">
+            <option value="all">All Services</option>
+            <option value="petrol">Petrol Bunks</option>
+            <option value="mechanic">Mechanics</option>
+            <option value="servicing">Servicing Centres</option>
+            <option value="carwash">Car Washes</option>
+            <option value="tyre">Tyre & Battery</option>
+            <option value="towing">Towing Services</option>
+        </select>
+
+        <select id="distanceFilter" aria-label="Search radius">
+            <option value="5">Within 5 km</option>
+            <option value="10">Within 10 km</option>
+            <option value="25">Within 25 km</option>
+            <option value="50">Within 50 km</option>
+        </select>
+
+        <select id="sortShops" aria-label="Sort shops">
+            <option value="nearest">Nearest first</option>
+            <option value="rating">Highest rating</option>
+            <option value="price">Lowest listed price</option>
+        </select>
+    </div>
+
+    <div class="results-heading">
+        <h3 id="resultsTitle">Service Providers</h3>
+        <span id="resultsCount">Choose your location to begin</span>
+    </div>
+
+    <div id="shopResults" class="shop-grid">
+        <div class="empty-state">
+            <span>📍</span>
+            <h3>Find help near you</h3>
+            <p>Choose your location and select a service to search for nearby providers.</p>
+            <button class="btn btn-primary" id="initialSearch">
+                Search Nearby
+            </button>
+        </div>
+    </div>
+
+    <div class="map-actions">
+        <p>Want to explore more places on a map?</p>
+        <button class="btn btn-outline" id="openMaps">
+            Open Google Maps ↗
         </button>
     </div>
 
-    <form id="accountForm">
-        <label for="accountName" id="nameLabel" hidden>
-            Full Name
-        </label>
-        <input
-            type="text"
-            id="accountName"
-            placeholder="Full name"
-            autocomplete="name"
-            hidden
-        >
-
-        <label for="accountEmail">Email</label>
-        <input
-            type="email"
-            id="accountEmail"
-            placeholder="Enter your email"
-            autocomplete="email"
-            required
-        >
-
-        <label for="accountPassword">Password</label>
-        <input
-            type="password"
-            id="accountPassword"
-            placeholder="Enter a demo password"
-            autocomplete="current-password"
-            required
-        >
-
-        <button type="submit">Continue</button>
-        <p id="accountMessage" role="status" aria-live="polite"></p>
-    </form>
+    <p class="disclaimer">
+        Shop information, distances, prices and offers must be verified before use.
+        Map searches may show third-party listings.
+    </p>
 </section>
-<!-- Appointment Booking -->
-<section class="booking-section" id="booking">
-    <h2>📅 Book a Vehicle Service</h2>
-    <p>Choose your service and preferred appointment time.</p>
 
-    <form id="bookingForm">
-        <label for="bookingName">Your name</label>
-        <input id="bookingName" type="text" required
-               placeholder="Enter your name">
+<!-- HIGHWAY EMERGENCY -->
+<section class="emergency-section" id="emergency">
+    <div class="emergency-copy">
+        <span class="eyebrow">HELP WHEN YOU NEED IT</span>
+        <h2>Vehicle Stopped on the <span class="yellow">Highway?</span></h2>
+        <p>
+            Find a mechanic, fuel delivery provider, tyre repair service
+            or towing operator near your location.
+        </p>
 
-        <label for="bookingPhone">Phone number</label>
-        <input id="bookingPhone" type="tel" required
-               pattern="[0-9]{10}" maxlength="10"
-               placeholder="10-digit mobile number">
+        <div class="emergency-services">
+            <span>🔧 On-site Repair</span>
+            <span>⛽ Fuel Assistance</span>
+            <span>🛞 Flat Tyre Help</span>
+            <span>🚚 Towing</span>
+        </div>
 
-        <label for="bookingService">Select service</label>
-        <select id="bookingService" required>
-            <option value="">Choose a service</option>
-            <option value="Mechanic Repair">Mechanic Repair — Demo ₹699</option>
-            <option value="Car Wash">Car Wash — Demo ₹349</option>
-            <option value="Vehicle Servicing">Vehicle Servicing — Demo ₹1,499</option>
-        </select>
+        <button class="btn btn-danger" id="emergencySearch">
+            Find Roadside Assistance
+        </button>
+        <p id="emergencyMessage" aria-live="polite"></p>
+    </div>
 
-        <label for="bookingDate">Appointment date</label>
-        <input id="bookingDate" type="date" required>
+    <div class="emergency-call-card">
+        <span class="service-icon">🚨</span>
+        <h3>Need urgent assistance?</h3>
+        <p>Use a verified provider or the appropriate local emergency service.</p>
+        <a href="tel:112" class="btn btn-danger">Call India Emergency: 112</a>
+        <small>Use 112 for emergencies, not as a vehicle-repair booking line.</small>
+    </div>
+</section>
 
-        <label for="bookingTime">Preferred time</label>
-        <input id="bookingTime" type="time" required>
+<!-- OFFERS -->
+<section class="section" id="offers">
+    <div class="offer-banner">
+        <div>
+            <span class="eyebrow">FESTIVE VEHICLE CARE</span>
+            <h2>Celebrate Diwali with a <span class="yellow">Fresh Shine!</span></h2>
+            <p>Discover car wash and vehicle servicing offers from participating garages.</p>
+            <button class="btn btn-light" id="viewOffers">Explore Offers →</button>
+        </div>
+        <div class="offer-art" aria-hidden="true">🪔 🚘 ✨</div>
+    </div>
 
-        <label for="bookingNotes">Additional details</label>
-        <textarea id="bookingNotes"
-                  placeholder="Vehicle model or problem (optional)"></textarea>
+    <div id="offersList" class="offer-grid">
+        <article class="offer-card">
+            <span class="offer-icon">🚿</span>
+            <h3>Car Wash Offers</h3>
+            <p>Look for discounts on basic wash, premium wash and detailing.</p>
+            <span class="offer-tag">Offers subject to garage confirmation</span>
+            <button class="btn btn-outline offer-search" data-service="carwash">
+                Find Car Washes
+            </button>
+        </article>
 
-        <button type="submit">Confirm Demo Booking</button>
+        <article class="offer-card">
+            <span class="offer-icon">⚙️</span>
+            <h3>Servicing Deals</h3>
+            <p>Compare maintenance packages and ask providers for their current prices.</p>
+            <span class="offer-tag">Check terms before booking</span>
+            <button class="btn btn-outline offer-search" data-service="servicing">
+                Find Service Centres
+            </button>
+        </article>
+
+        <article class="offer-card">
+            <span class="offer-icon">🔧</span>
+            <h3>Repair Offers</h3>
+            <p>Contact a garage to confirm labour costs, parts and availability.</p>
+            <span class="offer-tag">Price confirmation required</span>
+            <button class="btn btn-outline offer-search" data-service="mechanic">
+                Find Mechanics
+            </button>
+        </article>
+    </div>
+</section>
+
+<!-- BOOK APPOINTMENT -->
+<section class="section" id="booking">
+    <div class="section-heading">
+        <span class="eyebrow">PLAN YOUR VISIT</span>
+        <h2>Book an <span class="accent">Appointment</span></h2>
+        <p>Submit your preferred service and time.</p>
+    </div>
+
+    <form id="bookingForm" class="form-card">
+        <div class="form-grid">
+            <div class="form-field">
+                <label for="customerName">Your Name *</label>
+                <input id="customerName" name="customerName"
+                    required maxlength="80" placeholder="Enter your name">
+            </div>
+
+            <div class="form-field">
+                <label for="customerPhone">Mobile Number *</label>
+                <input id="customerPhone" name="customerPhone"
+                    type="tel" required inputmode="numeric"
+                    pattern="[0-9]{10}" maxlength="10"
+                    placeholder="10-digit mobile number">
+            </div>
+
+            <div class="form-field">
+                <label for="bookingService">Choose Service *</label>
+                <select id="bookingService" name="bookingService" required>
+                    <option value="">Select service</option>
+                    <option value="carwash">Car Wash</option>
+                    <option value="servicing">Vehicle Servicing</option>
+                    <option value="mechanic">Mechanic Repair</option>
+                    <option value="tyre">Tyre & Battery</option>
+                    <option value="towing">Towing Service</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="bookingDate">Preferred Date *</label>
+                <input id="bookingDate" name="bookingDate"
+                    type="date" required>
+            </div>
+
+            <div class="form-field">
+                <label for="bookingTime">Preferred Time *</label>
+                <select id="bookingTime" name="bookingTime" required>
+                    <option value="">Select time</option>
+                    <option>09:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>02:00 PM</option>
+                    <option>03:00 PM</option>
+                    <option>04:00 PM</option>
+                    <option>05:00 PM</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="garageName">Preferred Garage (optional)</label>
+                <input id="garageName" name="garageName"
+                    placeholder="Enter a garage name">
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="bookingNotes">Vehicle Details / Problem</label>
+            <textarea id="bookingNotes" name="bookingNotes"
+                rows="3" maxlength="500"
+                placeholder="Vehicle model, service required, or additional details"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-full" type="submit">
+            Submit Booking Request →
+        </button>
+
         <p id="bookingMessage" role="status" aria-live="polite"></p>
+        <p class="disclaimer">
+            Demo only: submitting does not notify a garage or confirm a real appointment.
+        </p>
     </form>
+
+    <div class="booking-history">
+        <h3>My Demo Booking Requests</h3>
+        <div id="bookingList">
+            <p>Your saved demo booking requests will appear here.</p>
+        </div>
+    </div>
 </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2026 WheelEasyy. Your journey, our responsibility.</p>
-    </footer>
 
-    <script src="script.js"></script>
+<!-- LOGIN / REGISTER -->
+<section class="section account-section" id="account">
+    <div class="account-intro">
+        <span class="eyebrow">WELCOME TO WHEELEASYY</span>
+        <h2>Your journey to easier vehicle care starts here.</h2>
+        <p>Save your demo booking requests and explore vehicle services in one place.</p>
+        <div class="account-benefit">✓ Easy service discovery</div>
+        <div class="account-benefit">✓ Convenient booking form</div>
+        <div class="account-benefit">✓ Offers and roadside help</div>
+    </div>
 
+    <div class="account-card" id="loginPanel">
+        <h2 id="accountTitle">Welcome Back!</h2>
+        <p id="accountSubtitle">Sign in to your WheelEasyy demo account.</p>
+
+        <form id="accountForm">
+            <div class="form-field" id="accountNameField" hidden>
+                <label for="accountName">Your Name</label>
+                <input id="accountName" name="accountName"
+                    autocomplete="name" maxlength="80">
+            </div>
+
+            <div class="form-field">
+                <label for="accountEmail">Email Address</label>
+                <input id="accountEmail" name="accountEmail"
+                    type="email" autocomplete="email" required
+                    placeholder="you@example.com">
+            </div>
+
+            <div class="form-field">
+                <label for="accountPassword">Password</label>
+                <input id="accountPassword" name="accountPassword"
+                    type="password" autocomplete="current-password"
+                    minlength="6" required placeholder="At least 6 characters">
+            </div>
+
+            <button class="btn btn-primary btn-full" type="submit" id="accountSubmit">
+                Login
+            </button>
+        </form>
+
+        <p id="accountMessage" role="status" aria-live="polite"></p>
+
+        <p class="account-switch">
+            <span id="switchPrompt">New to WheelEasyy?</span>
+            <button type="button" id="switchAccountMode">Create demo account</button>
+        </p>
+
+        <p class="disclaimer">
+            Front-end demo only. Do not enter a real password.
+            This form does not create a secure account or authenticate users.
+        </p>
+    </div>
+</section>
+
+<!-- CHATBOT -->
+<section class="section chatbot-section" id="help">
+    <div class="section-heading">
+        <span class="eyebrow">YOUR DIGITAL ASSISTANT</span>
+        <h2>Meet <span class="accent">WheelEasyy Bot</span> 🤖</h2>
+        <p>Ask about vehicle services, bookings, fuel stations or roadside assistance.</p>
+    </div>
+
+    <div class="chat-card">
+        <div class="chat-header">
+            <span class="bot-avatar">🤖</span>
+            <div>
+                <h3>WheelEasyy Assistant</h3>
+                <p>Automated demo assistant</p>
+            </div>
+            <span class="online-dot">● Ready</span>
+        </div>
+
+        <div id="chatMessages" class="chat-messages" aria-live="polite">
+            <div class="bot-message">
+                Hi! Welcome to WheelEasyy. How can I help with your vehicle today?
+            </div>
+        </div>
+
+        <div class="chat-quick-actions">
+            <button type="button" data-question="Find a petrol bunk">Petrol Bunk</button>
+            <button type="button" data-question="Find a mechanic">Mechanic</button>
+            <button type="button" data-question="Find a car wash">Car Wash</button>
+            <button type="button" data-question="How do I book an appointment?">Booking Help</button>
+            <button type="button" data-question="I need emergency roadside help">Emergency Help</button>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+            <input id="chatInput" name="chatInput"
+                maxlength="500" required
+                placeholder="Type your message..."
+                aria-label="Message the WheelEasyy Bot">
+            <button type="submit" aria-label="Send message">➤</button>
+        </form>
+        <p class="disclaimer">The bot gives basic demo responses and is not an emergency dispatcher.</p>
+    </div>
+</section>
+
+<!-- EMERGENCY CONTACTS -->
+<section class="section contacts-section" id="contacts">
+    <div class="section-heading">
+        <span class="eyebrow">KEEP IMPORTANT NUMBERS HANDY</span>
+        <h2>Emergency <span class="accent">Contacts</span></h2>
+    </div>
+
+    <div class="contact-grid">
+        <article class="contact-card">
+            <span>🚨</span>
+            <div>
+                <h3>India Emergency Helpline</h3>
+                <p>Police, fire or other emergencies</p>
+            </div>
+            <a href="tel:112">Call 112</a>
+        </article>
+
+        <article class="contact-card">
+            <span>🔧</span>
+            <div>
+                <h3>Roadside Assistance</h3>
+                <p>Contact a nearby verified mechanic or towing provider.</p>
+            </div>
+            <a href="#nearby">Find Help</a>
+        </article>
+
+        <article class="contact-card">
+            <span>⛽</span>
+            <div>
+                <h3>Fuel Assistance</h3>
+                <p>Find fuel stations and ask about fuel delivery.</p>
+            </div>
+            <a href="#services">Find Fuel</a>
+        </article>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <a href="#home" class="logo">
+        <span class="logo-icon">🚘</span>
+        <span>Wheel<span class="yellow">Easyy</span>
+            <small>DRIVE SAFE • STAY EASY</small>
+        </span>
+    </a>
+
+    <p>Your vehicle, our priority. Making vehicle care easier.</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#nearby">Nearby Shops</a>
+        <a href="#booking">Booking</a>
+        <a href="#contacts">Emergency Contacts</a>
+    </div>
+
+    <p class="footer-copy">© <span id="currentYear"></span> WheelEasyy. Demo website.</p>
+</footer>
+
+<!-- LOGIN DIALOG -->
+<dialog id="loginDialog" class="login-dialog">
+    <button type="button" id="closeLogin" class="dialog-close"
+        aria-label="Close login dialog">×</button>
+    <h2>Welcome to WheelEasyy</h2>
+    <p>Sign in or create a demo account below.</p>
+    <a class="btn btn-primary btn-full" href="#account" id="dialogLoginLink">
+        Continue to Login
+    </a>
+</dialog>
+
+<script src="script.js"></script>
 </body>
 </html>
