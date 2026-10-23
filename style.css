@@ -257,3 +257,75 @@ button:active {
 .services > p {
     color: #666;
 }
+/* ===== Hero Section Upgrade ===== */
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #071b35, #087cf0);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: heroFadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #e5efff;
+}
+
+.hero-content button {
+    background: #ffb703;
+    color: #172033;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content button:hover {
+    background: #ffd166;
+    transform: translateY(-3px);
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile screen adjustment */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 350px;
+        padding: 45px 18px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
