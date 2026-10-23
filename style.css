@@ -1641,3 +1641,100 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+/* ===== FUEL DELIVERY DESIGN ===== */
+
+.fuel-card {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.service-image {
+    position: relative;
+    height: 175px;
+    overflow: hidden;
+    background: #e7edfa;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.fuel-card:hover .service-image img {
+    transform: scale(1.06);
+}
+
+.image-badge {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 25px;
+    background: #101b35;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.service-content {
+    padding: 18px;
+}
+
+.service-content h3 {
+    margin-top: 10px;
+}
+
+.fuel-delivery-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 28px;
+    padding: 28px;
+    border-radius: 23px;
+    background: linear-gradient(
+        135deg,
+        #fff4df,
+        #ffffff 55%,
+        #eaf1ff
+    );
+}
+
+.fuel-intro {
+    padding: 18px 5px;
+}
+
+.fuel-intro h2 {
+    margin: 12px 0;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.15;
+}
+
+.fuel-intro p {
+    color: #66738a;
+    font-size: 14px;
+}
+
+#fuelForm {
+    min-width: 0;
+}
+
+#fuelMessage {
+    margin-top: 12px;
+    color: #087b58;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+    .fuel-delivery-section {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .service-image {
+        height: 150px;
+    }
+}
