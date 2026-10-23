@@ -648,3 +648,373 @@ section > p {
         animation-duration: 0.01ms !important;
     }
 }
+/* ========================================
+   WHEELEASYY - RESPONSIVE POLISH
+======================================== */
+
+/* Consistent smooth interactions */
+button,
+.call-button,
+.service-card,
+.shop-card {
+    transition: all 0.25s ease;
+}
+
+button:hover,
+.call-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Better section headings */
+section h2 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Cleaner service and mechanic cards */
+.service-card,
+.shop-card {
+    height: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Better input focus */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid rgba(8, 120, 209, 0.2);
+    outline-offset: 2px;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+    .service-container,
+    .shop-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .service-container,
+    .shop-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 45px 18px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        padding: 7px 8px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 35px 16px;
+    }
+
+    #accountForm {
+        padding: 22px 16px;
+    }
+
+    #serviceSearch {
+        max-width: 100%;
+    }
+
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+/* ==========================================
+   WHEELEASYY - COLORFUL MODERN THEME
+========================================== */
+
+:root {
+    --we-navy: #101b3f;
+    --we-blue: #2563eb;
+    --we-purple: #7047eb;
+    --we-gold: #ffc857;
+    --we-pink: #fce7f3;
+    --we-lavender: #ede9fe;
+    --we-sky: #dff3ff;
+    --we-cream: #fff7e6;
+    --we-text: #202b48;
+}
+
+/* Colorful page background */
+body {
+    background:
+        radial-gradient(ellipse at 5% 20%, #dceeff 0%, transparent 32%),
+        radial-gradient(ellipse at 95% 55%, #eee5ff 0%, transparent 30%),
+        linear-gradient(135deg, #f5f7ff, #fff7ed 55%, #eef8ff);
+    color: var(--we-text);
+}
+
+/* Modern dark navbar */
+.navbar {
+    background: linear-gradient(110deg, #101b3f, #243b80);
+    color: #ffffff;
+    box-shadow: 0 5px 25px rgba(16, 27, 63, 0.22);
+    border-bottom: 2px solid rgba(255, 200, 87, 0.7);
+}
+
+.logo {
+    color: var(--we-gold);
+}
+
+.navbar a {
+    color: #f2f5ff;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--we-gold);
+}
+
+/* Rich blue car hero */
+.hero {
+    background:
+        linear-gradient(
+            110deg,
+            rgba(12, 23, 57, 0.96),
+            rgba(37, 65, 153, 0.78),
+            rgba(112, 71, 235, 0.38)
+        ),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=85")
+        center / cover no-repeat;
+    color: #ffffff;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    text-shadow: 0 4px 22px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    color: #f0f4ff;
+}
+
+.hero button,
+.hero .btn {
+    background: linear-gradient(135deg, #ffd166, #ffab35);
+    color: #172344;
+    box-shadow: 0 8px 22px rgba(255, 171, 53, 0.25);
+}
+
+/* Colorful section headings */
+h1,
+h2,
+h3 {
+    color: var(--we-navy);
+}
+
+section h2 {
+    background: linear-gradient(100deg, #1d4ed8, #7047eb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Soft colored services background */
+.services {
+    background: linear-gradient(135deg, #e4f3ff, #f0eaff, #fff0e2);
+    border-radius: 28px;
+    margin: 24px auto;
+}
+
+/* Premium service cards */
+.service-card {
+    background: linear-gradient(145deg, #ffffff, #edf5ff);
+    border: 1px solid #d8e5ff;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(51, 65, 150, 0.1);
+}
+
+.service-card:nth-child(3n + 2) {
+    background: linear-gradient(145deg, #ffffff, #f2eaff);
+    border-color: #e3d7ff;
+}
+
+.service-card:nth-child(3n) {
+    background: linear-gradient(145deg, #ffffff, #fff1dc);
+    border-color: #ffe2b3;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 38px rgba(51, 65, 150, 0.17);
+}
+
+/* Gradient buttons */
+.service-card button,
+.service-card .btn {
+    background: linear-gradient(120deg, #2563eb, #7047eb);
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 14px rgba(78, 70, 210, 0.2);
+}
+
+.service-card button:hover,
+.service-card .btn:hover {
+    background: linear-gradient(120deg, #1d4ed8, #5b21b6);
+}
+
+/* Soft purple mechanic finder */
+.mechanic-finder {
+    background: linear-gradient(135deg, #dcecff, #e9e2ff, #fce7f3);
+    border: 1px solid rgba(112, 71, 235, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(66, 61, 150, 0.1);
+}
+
+/* Search area */
+.search-section {
+    background: linear-gradient(135deg, #fff8eb, #f2eaff, #e5f4ff);
+    border-radius: 26px;
+}
+
+#serviceSearch {
+    border: 1px solid #cbd8ff;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(70, 70, 150, 0.1);
+}
+
+#serviceSearch:focus {
+    border-color: var(--we-purple);
+    box-shadow: 0 0 0 4px rgba(112, 71, 235, 0.13);
+}
+
+/* Colorful filter chips */
+.filter-buttons button {
+    background: linear-gradient(135deg, #ffffff, #e8efff);
+    color: #243b80;
+    border: 1px solid #d4ddff;
+    border-radius: 30px;
+}
+
+.filter-buttons button:hover {
+    background: linear-gradient(120deg, #2563eb, #7047eb);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(112, 71, 235, 0.22);
+}
+
+/* Mechanic cards */
+.shop-section {
+    background: linear-gradient(135deg, #e3f6ff, #eae7ff, #fff0e1);
+    border-radius: 28px;
+    margin: 24px auto;
+}
+
+.shop-card {
+    background: linear-gradient(145deg, #ffffff, #f0f4ff);
+    border: 1px solid #dce4ff;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(51, 65, 150, 0.1);
+}
+
+.shop-card:hover {
+    border-color: #a5b4fc;
+    box-shadow: 0 18px 35px rgba(51, 65, 150, 0.16);
+}
+
+/* Green call buttons */
+.call-button {
+    background: linear-gradient(135deg, #16a34a, #087443);
+    color: #ffffff;
+    border-radius: 11px;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.2);
+}
+
+/* Warm contact section */
+.contact {
+    background: linear-gradient(135deg, #fff1dc, #ffe5ef, #e9e5ff);
+    border-radius: 26px;
+}
+
+/* Colorful account section */
+.account-section {
+    background: linear-gradient(135deg, #dcecff, #e9e2ff, #fce7f3);
+    border-radius: 26px;
+}
+
+#accountForm {
+    background: linear-gradient(145deg, #ffffff, #f3f0ff);
+    border: 1px solid #ded7ff;
+    border-radius: 22px;
+    box-shadow: 0 14px 38px rgba(76, 56, 150, 0.13);
+}
+
+#accountForm button {
+    background: linear-gradient(120deg, #2563eb, #7047eb);
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Midnight-blue footer */
+.footer {
+    background: linear-gradient(135deg, #0b1430, #182c61, #39266f);
+    color: #ffffff;
+    border-top: 3px solid #ffc857;
+}
+
+.footer p {
+    color: #e0e7ff;
+}
+
+.footer a {
+    color: #ffd166;
+}
+
+/* Accessible keyboard focus */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #ffc857;
+    outline-offset: 3px;
+}
+
+/* Mobile refinements */
+@media (max-width: 600px) {
+    .hero {
+        border-radius: 0 0 22px 22px;
+    }
+
+    .services,
+    .search-section,
+    .shop-section,
+    .contact,
+    .account-section {
+        border-radius: 18px;
+        margin: 14px auto;
+    }
+
+    .service-card,
+    .shop-card {
+        border-radius: 18px;
+    }
+}
