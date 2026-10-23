@@ -117,3 +117,37 @@ button:hover {
     background: white;
     transform: translateY(-3px);
 }
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: #eaf4ff;
+}
+
+.contact h2 {
+    color: #123456;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.contact button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #0056b3;
+}
