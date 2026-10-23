@@ -78,7 +78,26 @@
 
     </div>
 </section>
+<!-- Search and Filter Section -->
+<section class="search-section" id="search">
+    <h2>Find Your Vehicle Service</h2>
+    <p>What service do you need today?</p>
 
+    <input
+        type="text"
+        id="serviceSearch"
+        placeholder="Search mechanic, car wash..."
+    >
+
+    <div class="filter-buttons">
+        <button onclick="filterServices('all')">All</button>
+        <button onclick="filterServices('mechanic')">Mechanics</button>
+        <button onclick="filterServices('car wash')">Car Wash</button>
+        <button onclick="filterServices('servicing')">Servicing</button>
+    </div>
+
+    <div id="searchMessage"></div>
+</section>
 <!-- Mechanic Contact Section -->
 <section class="shop-section" id="shops">
     <h2>Mechanic Contact Center</h2>

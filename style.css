@@ -400,3 +400,54 @@ button:active {
         max-width: 340px;
     }
 }
+/* ===== Search and Filter ===== */
+
+.search-section {
+    text-align: center;
+    padding: 45px 20px;
+    background: #fff;
+}
+
+.search-section h2 {
+    color: #173b67;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.search-section p {
+    color: #666;
+    margin-bottom: 22px;
+}
+
+#serviceSearch {
+    width: 90%;
+    max-width: 500px;
+    padding: 14px 18px;
+    border: 2px solid #d5e2f0;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+#serviceSearch:focus {
+    border-color: #087cf0;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-buttons button {
+    border-radius: 25px;
+    padding: 10px 18px;
+}
+
+#searchMessage {
+    margin-top: 15px;
+    color: #173b67;
+    font-weight: bold;
+}
