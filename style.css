@@ -448,13 +448,13 @@ section > p {
 
 #accountForm {
     width: 100%;
-    max-width: 430px;
-    margin: 25px auto;
-    padding: 30px;
-    background: #ffffff;
-    border: 1px solid #e1e9f3;
-    border-radius: 16px;
-    box-shadow: 0 8px 28px rgba(18, 59, 99, 0.08);
+    max-width: 440px;
+    margin: 30px auto;
+    padding: 32px;
+    background: linear-gradient(145deg, #ffffff, #f7faff);
+    border: 1px solid #e0eaf5;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(18, 59, 99, 0.1);
     text-align: left;
 }
 
@@ -487,13 +487,19 @@ section > p {
 
 #accountForm button {
     width: 100%;
-    padding: 13px 18px;
-    margin-top: 10px;
-    background: #0878d1;
+    padding: 14px 18px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #0878d1, #075ba0);
     color: #ffffff;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 700;
-    transition: background 0.3s ease;
+    box-shadow: 0 5px 14px rgba(8, 120, 209, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#accountForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(8, 120, 209, 0.28);
 }
 
 #accountForm button:hover {
