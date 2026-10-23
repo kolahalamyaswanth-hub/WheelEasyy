@@ -1,58 +1,87 @@
+/* ========================================
+   1. GLOBAL STYLING
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #f4f7fb;
     color: #26344b;
-    text-align: center;
     margin: 0;
     padding: 0;
     line-height: 1.7;
 }
 
-h1 {
-    color: #ffffff;
-    font-size: 36px;
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+    color: #123b63;
 }
 
 p {
-    color: #555555;
-    font-size: 18px;
+    color: #596579;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
 }
 
 button {
-    background-color: #087f5b;
-    color: white;
-    border: none;
-    padding: 14px 25px;
-    font-size: 16px;
-    border-radius: 8px;
     cursor: pointer;
+    border: none;
 }
 
-button:hover {
-    background-color: #056647;
-}
-/* Navigation Bar */
+
+/* ========================================
+   2. NAVBAR
+======================================== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #123456;
-    padding: 15px 30px;
-    color: white;
+    padding: 15px 6%;
+    background-color: #ffffff;
+    color: #123b63;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
-    margin: 0;
-    font-size: 25px;
+    color: #0866c6;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .navbar ul {
     display: flex;
+    align-items: center;
+    gap: 8px;
     list-style: none;
-    gap: 25px;
     margin: 0;
     padding: 0;
 }
+
 .navbar a {
     color: #123b63;
     text-decoration: none;
@@ -61,836 +90,541 @@ button:hover {
     border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .navbar a:hover {
     background-color: #123b63;
     color: #ffffff;
 }
 
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
 
-    .navbar ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-/* Hero Section */
+/* ========================================
+   3. HERO SECTION
+======================================== */
+
 .hero {
-    min-height: 350px;
+    min-height: 380px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 50px 20px;
-    color: white;
-    background: linear-gradient(135deg, #123456, #007bff);
+    padding: 65px 20px;background:
+    linear-gradient(
+        90deg,
+        rgba(4, 24, 48, 0.92),
+        rgba(4, 40, 75, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=85")
+    center / cover no-repeat;
+    color: #ffffff;
 }
 
 .hero-content {
-    max-width: 750px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 .hero h1 {
-    font-size: clamp(32px, 5vw, 52px);
-    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 800;
+    margin: 0 0 20px;
+    line-height: 1.2;
 }
 
 .hero p {
+    color: #ffffff;
     font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 30px;
+    margin: 0 auto 28px;
+    max-width: 650px;
 }
 
-.hero button {
-    background: #ffb703;
-    color: #123456;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+.hero button,
+.hero .btn {
+    background: #ffb52e;
+    color: #17263a;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.hero button:hover {
-    background: white;
+.hero button:hover,
+.hero .btn:hover {
+    background: #ffc653;
     transform: translateY(-3px);
 }
-/* Contact Section */
-.contact {
+
+
+/* ========================================
+   4. GENERAL SECTION STYLING
+======================================== */
+
+section {
+    padding: 55px 6%;
     text-align: center;
-    padding: 50px 20px;
-    background: #eaf4ff;
+}
+
+section h2 {
+    font-size: clamp(25px, 3vw, 34px);
+    margin: 0 0 16px;
+}
+
+section > p {
+    margin: 0 auto 30px;
+}
+
+
+/* ========================================
+   5. NEARBY MECHANIC FINDER
+======================================== */
+.mechanic-finder {
+    background: linear-gradient(135deg, #eef6ff, #dcecff);
+    padding: 45px 20px;
+    border-radius: 18px;
+    margin: 25px auto;
+    max-width: 1150px;
+    box-shadow: 0 8px 25px rgba(18, 59, 99, 0.08);
+}
+
+.mechanic-finder h2 {
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   6. SERVICES SECTION
+======================================== */
+
+.services {
+    background-color: #f4f7fb;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+}
+
+.service-card {
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #f8fbff);
+    padding: 32px 24px;
+    border: 1px solid #e3ebf5;
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(18, 59, 99, 0.07);
+    text-align: center;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #91caff;
+    box-shadow: 0 16px 35px rgba(18, 59, 99, 0.14);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin: 8px 0 14px;
+}
+
+.service-card p {
+    margin-bottom: 20px;
+}
+
+.service-card button,
+.service-card .btn {
+    display: inline-block;
+    background-color: #0878d1;
+    color: #ffffff;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.service-card button:hover,
+.service-card .btn:hover {
+    background-color: #075ba0;
+}
+
+
+/* ========================================
+   7. SEARCH AND FILTER SECTION
+======================================== */
+
+.search-section {
+    background-color: #ffffff;
+}
+#serviceSearch {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 16px 22px;
+    border: 1px solid #d8e5f4;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #26344b;
+    font-size: 16px;
+    box-shadow: 0 5px 20px rgba(18, 59, 99, 0.06);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#serviceSearch:focus {
+    border-color: #0878d1;
+    box-shadow: 0 0 0 4px rgba(8, 120, 209, 0.12);
+}
+
+#serviceSearch:focus {
+    border-color: #0878d1;
+    box-shadow: 0 0 0 3px rgba(8, 120, 209, 0.12);
+}
+
+.filter-buttons button {
+    background: #edf4fc;
+    color: #123b63;
+    padding: 11px 22px;
+    border: 1px solid #d9e6f5;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease,
+                transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background: #0878d1;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(8, 120, 209, 0.2);
+}
+/* ========================================
+   8. SEARCH FILTER BUTTONS
+======================================== */
+
+.filter-buttons button {
+    background: #e8f1fc;
+    color: #123b63;
+    padding: 10px 20px;
+    border: 1px solid #d7e5f6;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button:focus {
+    background: #0878d1;
+    color: #ffffff;
+    border-color: #0878d1;
+}
+
+
+/* ========================================
+   9. MECHANIC AND SHOP CARDS
+======================================== */
+
+.shop-section {
+    background: #f4f7fb;
+}
+
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.shop-card {
+    background: #ffffff;
+    padding: 25px;
+    border: 1px solid #e5ebf3;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(18, 59, 99, 0.07);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(18, 59, 99, 0.13);
+}
+
+.shop-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.shop-card p {
+    font-size: 15px;
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.call-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 11px 20px;
+    background: #0878d1;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.call-button:hover {
+    background: #075ba0;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   10. CONTACT SECTION
+======================================== */
+
+.contact {
+    background: #ffffff;
+    padding: 60px 6%;
 }
 
 .contact h2 {
-    color: #123456;
-    font-size: 30px;
     margin-bottom: 15px;
 }
 
 .contact p {
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto 25px;
-    line-height: 1.7;
+    max-width: 700px;
+    margin: 10px auto;
 }
 
-.contact button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 14px 25px;
+.contact a {
+    color: #0878d1;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   11. ACCOUNT / LOGIN SECTION
+======================================== */
+
+.account-section {
+    background: #eef4fb;
+    padding: 55px 20px;
+}
+
+.account-section h2 {
+    margin-bottom: 20px;
+}
+
+#accountForm {
+    width: 100%;
+    max-width: 430px;
+    margin: 25px auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e1e9f3;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(18, 59, 99, 0.08);
+    text-align: left;
+}
+
+#accountForm label {
+    display: block;
+    margin: 12px 0 5px;
+    color: #123b63;
+    font-weight: 600;
+}
+
+#accountForm input,
+#accountForm select,
+#accountForm textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #d5deea;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
+    background: #ffffff;
+    color: #26344b;
+    outline: none;
 }
 
-.contact button:hover {
-    background: #0056b3;
+#accountForm input:focus,
+#accountForm select:focus,
+#accountForm textarea:focus {
+    border-color: #0878d1;
+    box-shadow: 0 0 0 3px rgba(8, 120, 209, 0.12);
 }
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-    .services {
-        padding: 30px 15px;
+
+#accountForm button {
+    width: 100%;
+    padding: 13px 18px;
+    margin-top: 10px;
+    background: #0878d1;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+#accountForm button:hover {
+    background: #075ba0;
+}
+
+#accountMessage {
+    margin-top: 16px;
+    color: #123b63;
+    text-align: center;
+}
+
+
+/* ========================================
+   12. FOOTER
+======================================== */
+
+.footer {
+    padding: 28px 20px;
+    background: #0b2038;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer p {
+    color: #d3deeb;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #8dccff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   13. RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+    .service-container,
+    .shop-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+.hero-content {
+        padding: 0 20px;
+    }
+    .navbar {
+        padding: 14px 4%;
     }
 
-    .service-container {
+    .navbar ul {
+        gap: 4px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        padding: 7px 9px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
         flex-direction: column;
-        align-items: center;
+        gap: 12px;
+        padding: 15px 12px;
     }
 
-    .service-card {
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar ul {
         width: 100%;
-        max-width: 350px;
-        box-sizing: border-box;
+        gap: 5px;
+    }
+
+    .navbar a {
+        display: inline-block;
+        padding: 7px 8px;
+        font-size: 13px;
     }
 
     .hero {
-        min-height: 280px;
-        padding: 35px 15px;
+        min-height: 320px;
+        padding: 45px 18px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
     }
 
     .hero p {
         font-size: 16px;
     }
 
-    .contact {
-        padding: 35px 15px;
-    }
-}
-/* ===== WheelEasyy UI Improvements ===== */
-
-html {
-    scroll-behavior: smooth;
-}
-
-.service-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 25px;
-    padding: 25px 15px;
-}
-
-.service-card {
-    background: white;
-    width: 280px;
-    padding: 25px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-}
-
-.service-card h3 {
-    margin-bottom: 15px;
-    color: #173b67;
-}
-
-.service-card p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-button {
-    background: #087cf0;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background: #005ac1;
-    transform: scale(1.04);
-}
-
-button:active {
-    transform: scale(0.97);
-}
-
-.services {
-    padding: 45px 20px;
-    text-align: center;
-}
-
-.services > h2 {
-    font-size: 32px;
-    color: #173b67;
-    margin-bottom: 12px;
-}
-
-.services > p {
-    color: #666;
-}
-/* ===== Hero Section Upgrade ===== */
-
-.hero {
-    min-height: 430px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #071b35, #087cf0);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    max-width: 750px;
-    animation: heroFadeIn 1s ease-out;
-}
-
-.hero-content h1 {
-    font-size: clamp(32px, 5vw, 54px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-    font-weight: 800;
-}
-
-.hero-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    color: #e5efff;
-}
-
-.hero-content button {
-    background: #ffb703;
-    color: #172033;
-    padding: 15px 28px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.hero-content button:hover {
-    background: #ffd166;
-    transform: translateY(-3px);
-}
-
-@keyframes heroFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mobile screen adjustment */
-@media (max-width: 600px) {
-    .hero {
-        min-height: 350px;
-        padding: 45px 18px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-}
-/* ===== Mechanic Contact Section ===== */
-
-.shop-section {
-    padding: 55px 20px;
-    text-align: center;
-    background: #f2f7fc;
-}
-
-.shop-section h2 {
-    color: #173b67;
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.shop-section > p {
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.shop-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.shop-card {
-    width: 280px;
-    padding: 25px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
-    transition: transform 0.3s ease;
-}
-
-.shop-card:hover {
-    transform: translateY(-7px);
-}
-
-.shop-card h3 {
-    color: #173b67;
-    margin-bottom: 15px;
-}
-
-.shop-card p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.call-button {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #16a34a;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-}
-
-.call-button:hover {
-    background: #12803b;
-}
-
-@media (max-width: 600px) {
-    .shop-card {
-        width: 100%;
-        max-width: 340px;
-    }
-}
-/* ===== Search and Filter ===== */
-
-.search-section {
-    text-align: center;
-    padding: 45px 20px;
-    background: #fff;
-}
-
-.search-section h2 {
-    color: #173b67;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.search-section p {
-    color: #666;
-    margin-bottom: 22px;
-}
-
-#serviceSearch {
-    width: 90%;
-    max-width: 500px;
-    padding: 14px 18px;
-    border: 2px solid #d5e2f0;
-    border-radius: 30px;
-    font-size: 16px;
-    outline: none;
-    margin-bottom: 20px;
-}
-
-#serviceSearch:focus {
-    border-color: #087cf0;
-}
-
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.filter-buttons button {
-    border-radius: 25px;
-    padding: 10px 18px;
-}
-
-#searchMessage {
-    margin-top: 15px;
-    color: #173b67;
-    font-weight: bold;
-}
-/* =================================
-   WheelEasyy Professional Redesign
-================================= */
-
-:root {
-    --we-primary: #1264e8;
-    --we-primary-dark: #0847b8;
-    --we-navy: #101c35;
-    --we-text: #26344b;
-    --we-muted: #68758a;
-    --we-bg: #f4f7fc;
-    --we-white: #ffffff;
-    --we-border: #e2e8f2;
-    --we-radius: 18px;
-    --we-shadow: 0 10px 35px rgba(16, 28, 53, 0.08);
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 85px;
-}
-
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: var(--we-text);
-    background: var(--we-white);
-    line-height: 1.6;
-}
-
-h1, h2, h3, p {
-    overflow-wrap: anywhere;
-}
-
-h2 {
-    letter-spacing: -0.6px;
-}
-
-/* Navigation */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 15px 6%;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid var(--we-border);
-    box-shadow: 0 3px 15px rgba(16, 28, 53, 0.04);
-}
-
-.logo {
-    color: var(--we-primary);
-    margin: 0;
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.navbar ul {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar a {
-    color: var(--we-text);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.navbar a:hover {
-    color: var(--we-primary);
-}
-
-/* Hero */
-
-.hero {
-    min-height: 460px;
-    padding: 75px 20px;
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(62, 137, 255, 0.35),
-            transparent 30%
-        ),
-        linear-gradient(125deg, #0c1830, #123f86 65%, #1264e8);
-    color: white;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
-    animation: weAppear 0.7s ease-out;
-}
-
-.hero-content h1 {
-    font-size: clamp(36px, 6vw, 62px);
-    line-height: 1.12;
-    letter-spacing: -1.8px;
-    margin: 0 0 22px;
-}
-
-.hero-content p {
-    max-width: 650px;
-    margin: 0 auto 30px;
-    color: #e0eaff;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.hero-content button {
-    background: #ffbf47;
-    color: #18233b;
-    border-radius: 12px;
-    padding: 15px 25px;
-}
-
-.hero-content button:hover {
-    background: #ffd47d;
-}
-
-/* Introduction and headings */
-
-.intro {
-    text-align: center;
-    padding: 40px 20px 20px;
-}
-
-.intro h2,
-.services h2,
-.shop-section h2,
-.search-section h2 {
-    color: var(--we-navy);
-    font-size: clamp(26px, 4vw, 34px);
-    margin-top: 0;
-}
-
-.intro p,
-.services > p,
-.shop-section > p,
-.search-section > p {
-    color: var(--we-muted);
-}
-
-/* Services and shop cards */
-
-.services {
-    padding: 55px 6%;
-    background: var(--we-bg);
-    text-align: center;
-}
-
-.service-container,
-.shop-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 24px;
-    margin-top: 30px;
-}
-
-.service-card,
-.shop-card {
-    box-sizing: border-box;
-    width: 280px;
-    max-width: 100%;
-    padding: 28px 24px;
-    background: var(--we-white);
-    border: 1px solid var(--we-border);
-    border-radius: var(--we-radius);
-    box-shadow: var(--we-shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.service-card:hover,
-.shop-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(16, 28, 53, 0.13);
-}
-
-.service-card h3,
-.shop-card h3 {
-    color: var(--we-navy);
-    margin-top: 0;
-    font-size: 19px;
-}
-
-.service-card p,
-.shop-card p {
-    color: var(--we-muted);
-    line-height: 1.8;
-}
-
-/* Buttons */
-
-button {
-    font-family: inherit;
-    font-weight: 650;
-    border: none;
-    cursor: pointer;
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible {
-    outline: 3px solid #8bb8ff;
-    outline-offset: 3px;
-}
-
-button:hover {
-    box-shadow: 0 5px 14px rgba(18, 100, 232, 0.18);
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-/* Search and filters */
-
-.search-section {
-    padding: 55px 20px;
-    text-align: center;
-    background: white;
-}
-
-#serviceSearch {
-    max-width: 520px;
-    width: 100%;
-    padding: 15px 20px;
-    margin: 10px auto 20px;
-    border: 1px solid #d4deeb;
-    border-radius: 12px;
-    font: inherit;
-}
-
-#serviceSearch:focus {
-    border-color: var(--we-primary);
-    outline: 2px solid rgba(18, 100, 232, 0.12);
-}
-
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.filter-buttons button {
-    background: #eaf1ff;
-    color: var(--we-primary-dark);
-    padding: 10px 17px;
-    border-radius: 10px;
-}
-
-.filter-buttons button:hover {
-    background: var(--we-primary);
-    color: white;
-}
-
-/* Contact and account areas */
-
-.contact {
-    padding: 55px 20px;
-    text-align: center;
-    background: var(--we-navy);
-    color: white;
-}
-
-.contact h2 {
-    font-size: clamp(26px, 4vw, 34px);
-}
-
-.contact p {
-    max-width: 620px;
-    margin: 0 auto 25px;
-    color: #d5deee;
-}
-
-.account-section {
-    background: var(--we-bg);
-    padding: 60px 20px;
-}
-
-.account-box {
-    border: 1px solid var(--we-border);
-    border-radius: 22px;
-    box-shadow: var(--we-shadow);
-}
-
-.account-box input,
-.account-box select {
-    font: inherit;
-    border: 1px solid #d4deeb;
-    border-radius: 10px;
-}
-
-.account-submit {
-    border-radius: 10px;
-    padding: 14px;
-}
-
-/* Call buttons */
-
-.call-button {
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 10px;
-    background: #138647;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background 0.2s ease;
-}
-
-.call-button:hover {
-    background: #0d6c37;
-}
-
-/* Footer */
-
-.footer {
-    padding: 22px 15px;
-    text-align: center;
-    background: #0a1325;
-    color: #c8d3e5;
-    font-size: 14px;
-}
-
-/* Animation */
-
-@keyframes weAppear {
-    from {
-        opacity: 0;
-        transform: translateY(14px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mobile responsive design */
-
-@media (max-width: 650px) {
-    .navbar {
-        padding: 14px 4%;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 23px;
-    }
-
-    .navbar ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 18px;
-    }
-
-    .hero {
-        min-height: 370px;
-        padding: 60px 20px;
-        text-align: center;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .services {
-        padding: 40px 15px;
+    section {
+        padding: 40px 18px;
     }
 
     .service-container,
     .shop-container {
+        grid-template-columns: 1fr;
         gap: 18px;
     }
 
     .service-card,
     .shop-card {
-        width: 100%;
-        max-width: 380px;
+        padding: 22px 18px;
     }
 
-    .account-box {
-        padding: 22px;
+    #accountForm {
+        padding: 22px 18px;
+    }
+
+    #serviceSearch {
+        padding: 13px;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-buttons button {
+        padding: 9px 14px;
+        font-size: 14px;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     *,
     *::before,
     *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
-}
-/* Global Design Improvements */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f4f7fb;
-    color: #344054;
-    line-height: 1.7;
-}
-
-section {
-    padding: 60px 7%;
 }
