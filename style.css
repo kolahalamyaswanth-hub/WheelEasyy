@@ -1018,3 +1018,371 @@ input:focus-visible {
         border-radius: 18px;
     }
 }
+/* =========================================
+   WHEELEASYY - PREMIUM VISUAL EFFECTS
+========================================= */
+
+/* Colorful hero button */
+.hero button,
+.hero .btn {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 25px rgba(255, 190, 60, 0.3);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.hero button:hover,
+.hero .btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(255, 190, 60, 0.45);
+}
+
+/* Colorful service card top accent */
+.service-card {
+    position: relative;
+    isolation: isolate;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7047eb,
+        #f472b6,
+        #ffc857
+    );
+    border-radius: 20px 20px 0 0;
+}
+
+/* Smooth mechanic card hover */
+.shop-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.shop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(76, 56, 150, 0.2);
+}
+
+/* Gradient headings */
+.service-card h3,
+.shop-card h3 {
+    background: linear-gradient(100deg, #1d4ed8, #7047eb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Modern input styling */
+#serviceSearch,
+#accountForm input,
+#accountForm select,
+#accountForm textarea {
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Accessible motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+/* WHEELEASYY - SERVICE ICONS */
+
+.service-card h3::before {
+    display: block;
+    font-size: 38px;
+    margin-bottom: 12px;
+    -webkit-text-fill-color: initial;
+    background: none;
+}
+
+/* Mechanic repair */
+.service-card:nth-child(1) h3::before {
+    content: "🔧";
+}
+
+/* Car washing */
+.service-card:nth-child(2) h3::before {
+    content: "🚿";
+}
+
+/* Vehicle servicing */
+.service-card:nth-child(3) h3::before {
+    content: "🚘";
+}
+
+/* Smooth icon animation */
+.service-card h3::before {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover h3::before {
+    transform: scale(1.15) rotate(-5deg);
+}
+/* WHEELEASYY - REPAIR SHOP CARD UPGRADE */
+
+.shop-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #dbe5ff;
+    border-radius: 20px;
+    padding: 22px;
+    background: linear-gradient(145deg, #ffffff, #f1f5ff);
+    box-shadow: 0 8px 24px rgba(30, 55, 120, 0.09);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: left;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 32px rgba(54, 60, 140, 0.16);
+}
+
+.shop-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #172554;
+}
+
+.shop-card p {
+    color: #52617a;
+    line-height: 1.7;
+}
+
+.call-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 18px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.call-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(22, 163, 74, 0.25);
+}
+
+.call-button:focus-visible {
+    outline: 3px solid #86efac;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .shop-card {
+        padding: 17px;
+    }
+
+    .call-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* EMERGENCY SECTION */
+.emergency-section,
+.account-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    border-radius: 24px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.emergency-section {
+    background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+    border: 2px solid #ffcaca;
+}
+
+.emergency-section h2 {
+    color: #b91c1c;
+}
+
+.emergency-section button {
+    background: #dc2626;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.emergency-section button:hover {
+    background: #991b1b;
+}
+
+.safety-note {
+    font-size: 14px;
+    color: #713f3f;
+    margin-top: 18px;
+}
+
+/* LOGIN AND REGISTER */
+.account-section {
+    background: linear-gradient(135deg, #e7efff, #f1e8ff);
+}
+
+.account-tabs {
+    margin: 18px 0;
+}
+
+.account-section button {
+    padding: 11px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #3949ab;
+    color: white;
+    cursor: pointer;
+}
+
+#accountForm {
+    max-width: 420px;
+    margin: auto;
+    padding: 22px;
+    background: white;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+#accountForm label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+}
+
+#accountForm input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 8px 0;
+    padding: 12px;
+    border: 1px solid #ccd4e5;
+    border-radius: 9px;
+}
+
+#accountForm input[hidden],
+#accountForm label[hidden] {
+    display: none;
+}
+
+#accountForm button[type="submit"] {
+    width: 100%;
+    margin: 16px 0 0;
+    background: linear-gradient(100deg, #2563eb, #7047eb);
+}
+
+#emergencyMessage,
+#accountMessage {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .emergency-section,
+    .account-section {
+        margin: 20px 12px;
+        padding: 22px 14px;
+    }
+}
+/* WHEELEASYY APPOINTMENT BOOKING */
+.booking-section {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #e4f3ff, #f0eaff, #fff1e5);
+    box-sizing: border-box;
+}
+
+#bookingForm {
+    max-width: 480px;
+    margin: 20px auto 0;
+    padding: 24px;
+    background: white;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(40, 50, 100, 0.1);
+}
+
+#bookingForm label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccd4e5;
+    border-radius: 10px;
+    font: inherit;
+}
+
+#bookingForm textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+#bookingForm button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(100deg, #2563eb, #7047eb);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.service-price strong {
+    color: #15803d;
+    font-size: 1.3em;
+}
+
+.service-price span {
+    display: inline-block;
+    color: #166534;
+    background: #dcfce7;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85em;
+}
+
+@media (max-width: 600px) {
+    .booking-section {
+        margin: 20px 12px;
+        padding: 22px 14px;
+    }
+
+    #bookingForm {
+        padding: 16px;
+    }
+}
