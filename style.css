@@ -1,13 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #26344b;
     text-align: center;
     margin: 0;
-    padding: 40px;
+    padding: 0;
+    line-height: 1.7;
 }
 
 h1 {
-    color: #123b63;
+    color: #ffffff;
     font-size: 36px;
 }
 
@@ -869,4 +871,24 @@ button:active {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }
+}
+/* Global Design Improvements */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #344054;
+    line-height: 1.7;
+}
+
+section {
+    padding: 60px 7%;
 }
